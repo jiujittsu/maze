@@ -1,6 +1,6 @@
 // Инициализация TonConnect
 const connector = new TonConnect.TonConnect({
-    manifestUrl: 'http://localhost:5500/tonconnect-manifest.json'
+    manifestUrl: 'https://jiujittsu.github.io/maze/tonconnect-manifest.json'
 });
 
 // Элементы интерфейса
@@ -62,7 +62,7 @@ sendTxBtn.addEventListener('click', async () => {
             {
                 address: "EQABC123...", // Замените на реальный адрес получателя
                 amount: "100000000", // 0.1 TON (в наноТОН)
-                payload: "Payment for order #123" // Комментарий
+                payload: "Payment from Maze App" // Комментарий
             }
         ]
     };
@@ -70,10 +70,10 @@ sendTxBtn.addEventListener('click', async () => {
     try {
         const result = await connector.sendTransaction(tx);
         console.log('Transaction sent:', result);
-        walletInfo.innerHTML += '<p style="color: green;">Payment successful!</p>';
+        walletInfo.innerHTML += '<p style="color: green; margin-top: 10px;">✓ Transaction successful!</p>';
     } catch (error) {
         console.error('Transaction error:', error);
-        walletInfo.innerHTML += '<p style="color: red;">Payment failed: ' + error.message + '</p>';
+        walletInfo.innerHTML += '<p style="color: red; margin-top: 10px;">✗ Transaction failed</p>';
     }
 });
 
