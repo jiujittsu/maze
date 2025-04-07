@@ -1,0 +1,8 @@
+{
+    "url": "http://localhost:5500",
+    "name": "TON Store",
+    "iconUrl": "http://localhost:5500/icon.png",
+    "termsOfUseUrl": "http://localhost:5500/terms",
+    "privacyPolicyUrl": "http://localhost:5500/privacy",
+    "networks": ["mainnet", "testnet"]
+}
