@@ -60,7 +60,7 @@ sendTxBtn.addEventListener('click', async () => {
         validUntil: Math.floor(Date.now() / 1000) + 300, // 5 минут
         messages: [
             {
-                address: "EQABC123...", // Замените на реальный адрес получателя
+                address: "EQABC123...", 
                 amount: "100000000", // 0.1 TON (в наноТОН)
                 payload: "Payment from Maze App" // Комментарий
             }
